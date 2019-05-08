@@ -1,0 +1,13 @@
+{{ define "title" }}
+{{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+
+{{ define "description" }}
+<meta name="Description" content="{{.Params.description}}">
+{{ end }}
+
+{{ define "main" }}
+<div style="text-align: left;">
+    {{ .Content }}
+</div>
+{{ end }}

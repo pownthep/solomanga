@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/one-piece/chapter-1/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/solo-leveling/chapter-68/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/solo-leveling/chapter-69/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/one-piece/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/solo-leveling/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

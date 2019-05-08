@@ -1,0 +1,17 @@
+{{ define "description" }}
+<meta name="Description" content="List of posts">
+{{ end }}
+{{ define "main" }}
+<main class="post-list">
+    <article>
+    <header style="display:inline-block;">
+        Mangas and Manwhas
+    </header>
+    </article> 
+    {{ range .Sections }}
+    <p>
+        <a href="{{.URL}}"> {{.Title}} </a> 
+    </p>
+    {{ end }}
+</main>
+{{ end }}
