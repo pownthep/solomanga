@@ -3,37 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://pownthep.github.io/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://pownthep.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/one-piece/chapter-1/</loc>
+    <loc>https://pownthep.github.io/one-piece/chapter-1/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/solo-leveling/chapter-68/</loc>
+    <loc>https://pownthep.github.io/solo-leveling/chapter-68/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/solo-leveling/chapter-69/</loc>
+    <loc>https://pownthep.github.io/solo-leveling/chapter-69/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/one-piece/</loc>
+    <loc>https://pownthep.github.io/one-piece/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/solo-leveling/</loc>
+    <loc>https://pownthep.github.io/solo-leveling/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://pownthep.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   

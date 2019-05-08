@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>One Piece on My New Hugo Site</title>
-    <link>http://example.org/one-piece/</link>
+    <link>https://pownthep.github.io/one-piece/</link>
     <description>Recent content in One Piece on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example.org/one-piece/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pownthep.github.io/one-piece/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Chapter 01</title>
-      <link>http://example.org/one-piece/chapter-1/</link>
+      <link>https://pownthep.github.io/one-piece/chapter-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/one-piece/chapter-1/</guid>
+      <guid>https://pownthep.github.io/one-piece/chapter-1/</guid>
       <description></description>
     </item>
     
