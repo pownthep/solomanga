@@ -1,0 +1,16 @@
+{{ define "description" }}
+<meta name="Description" content="List of posts">
+{{ end }}
+{{ define "main" }}
+<main>
+    <div class="list-series">
+        {{ range .Sections }}
+        <div class="series">
+            <p>
+                <a href="{{.Permalink}}"> {{.Title}} </a> 
+            </p>
+        </div>
+        {{ end }}
+    </div>
+</main>
+{{ end }}
