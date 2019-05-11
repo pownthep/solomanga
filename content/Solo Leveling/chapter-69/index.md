@@ -1,5 +1,5 @@
 ---
-title: "Chapter 69"
+title: "Solo Leveling Chapter 69"
 date: 1/1/1
 range: 78
 ---
