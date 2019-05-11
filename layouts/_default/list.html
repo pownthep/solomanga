@@ -1,18 +1,26 @@
-{{ define "title" }}
-{{ .Title }}
-{{ end }}
-
-{{ define "description" }}
-<meta name="Description" content="{{.Params.description}}">
-{{ end }}
-
-{{ partial "style.html" . }}
-{{ partial "nav.html" . }}
-
-{{ range .Pages }}
-<div class="card" style="margin: 20px;">
-    <div class="card-body">
-        <a href="{{.Permalink}}"> {{.Title}} </a> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {{ .Title }}
+    </title>
+    <meta name="Description" content="{{.Params.description}}">
+    {{ partial "style.html" . }}
+  </head>
+  <body>
+    <!-- Code that all your templates share, like a header -->
+    {{ partial "nav.html" . }}
+    <div style="margin-left: 20px;">
+        {{ .Content }}
     </div>
-</div>
-{{ end }}
+    {{ range .Pages }}
+    <div class="card"  style="margin: 20px;">
+        <div class="card-body">
+            <a href="{{.Permalink}}" aria-label="{{.Title}}">{{.Title}}</a> 
+        </div>
+    </div>
+    {{ end }}
+  </body>
+</html>

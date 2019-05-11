@@ -1,13 +1,14 @@
 {{ define "description" }}
-<meta name="Description" content="List of posts">
+<meta name="Description" content="Read mangas and manwha online for free. Fast and no ads.">
 {{ end }}
 {{ define "main" }}
 {{ partial "nav.html" . }}
 <main>
+    <h3 style="margin-left:20px;">Manwha</h3>
     {{ range .Sections }}
     <div class="card"  style="margin: 20px;">
         <div class="card-body">
-            <a href="{{.Permalink}}">{{.Title}}</a> 
+            <a href="{{.Permalink}}" aria-label="{{.Title}}">{{.Title}}</a> 
         </div>
     </div>
     {{ end }}
