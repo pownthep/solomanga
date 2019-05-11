@@ -7,18 +7,16 @@
 {{ end }}
 
 {{ define "main" }}
-<div style="text-align: center;">
-    <div class="alert alert-light" role="alert">
-        READ LEFT TO RIGHT
-    </div>
+<div style="text-align: center; margin-top: 20px;">
     {{ .Content }}
     {{/*  {{ range $i, $sequence :=  (seq .Params.range) }}  */}}
-    {{ range after 2 (seq .Params.range) }}
+    {{ range $i, $sequence := (seq .Params.range) }}
     <img 
     class="lazy" 
     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" 
-    data-src="img/{{ . }}.jpg" 
+    data-src="img/{{ $i }}.webp" 
     alt="Alternative text to describe image.">
+    <br>
     {{ end }}
 </div>
 <script>
