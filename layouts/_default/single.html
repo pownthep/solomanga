@@ -8,7 +8,9 @@
 
 {{ define "main" }}
 <div style="text-align: center;">
-    <h3>RIGHT --------> LEFT</h3>
+    <div class="alert alert-light" role="alert">
+        READ LEFT TO RIGHT
+    </div>
     {{ .Content }}
     {{/*  {{ range $i, $sequence :=  (seq .Params.range) }}  */}}
     {{ range after 2 (seq .Params.range) }}

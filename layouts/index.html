@@ -2,15 +2,14 @@
 <meta name="Description" content="List of posts">
 {{ end }}
 {{ define "main" }}
+{{ partial "nav.html" . }}
 <main>
-    <div class="list-series">
-        {{ range .Sections }}
-        <div class="series">
-            <p>
-                <a href="{{.Permalink}}"> {{.Title}} </a> 
-            </p>
+    {{ range .Sections }}
+    <div class="card"  style="margin: 20px;">
+        <div class="card-body">
+            <a href="{{.Permalink}}">{{.Title}}</a> 
         </div>
-        {{ end }}
     </div>
+    {{ end }}
 </main>
 {{ end }}
