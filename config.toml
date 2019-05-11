@@ -1,4 +1,4 @@
-baseURL = "https://pownthep.github.io/apache-read/"
+baseURL = ""
 languageCode = "en-us"
-title = "Apache Read"
+title = "Solo Manga"
 publishDir = "docs"
