@@ -7,6 +7,18 @@
 {{ end }}
 
 {{ define "main" }}
+<style>
+    img {
+        margin-bottom: 20px;
+        border: 3px solid black;
+    }
+    @media only screen and (max-width: 375px) {
+        img {
+            width: 100vw;
+        }
+    }
+</style>
+{{ partial "nav.html" . }}
 <div style="text-align: center; margin-top: 20px;">
     {{ .Content }}
     {{/*  {{ range $i, $sequence :=  (seq .Params.range) }}  */}}
@@ -15,7 +27,8 @@
     class="lazy" 
     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" 
     data-src="img/{{ $i }}.webp" 
-    alt="Alternative text to describe image.">
+    alt="Alternative text to describe image."
+    onerror="this.style.display='none'">
     <br>
     {{ end }}
 </div>

@@ -7,20 +7,32 @@
         Read the latest {{ .Title }} chapters on Solo Manga!
     </title>
     <meta name="Description" content="{{.Params.description}}">
+    <script defer src="{{.Site.BaseURL}}js/ql.js"></script>
+    <link rel="stylesheet" href="{{.Site.BaseURL}}css/build/bootstrap.min.css">
     {{ partial "style.html" . }}
+
   </head>
+  <style>
+    img {
+      width: 100%;
+    }
+  </style>
   <body>
-    <!-- Code that all your templates share, like a header -->
-    {{ partial "nav.html" . }}
-    <div style="margin-left: 20px;">
+      {{ partial "nav.html" . }}
+      <div style="margin-left: 20px; margin-right: 20px; overflow: auto;">
         {{ .Content }}
-    </div>
-    {{ range .Pages }}
-    <div class="card"  style="margin: 20px;">
-        <div class="card-body">
-            <a href="{{.Permalink}}" aria-label="{{.Title}}">{{.Title}}</a> 
+        {{ range .Pages.Reverse }}
+        <div class="card" style="margin-bottom: 10px;">
+            <div class="card-body">
+                <a href="{{.Permalink}}" aria-label="{{.Title}}">{{.Title}}</a> 
+            </div>
         </div>
-    </div>
-    {{ end }}
+        {{ end }}
+      </div>
+      <script>
+          window.addEventListener('load', () =>{
+              quicklink();
+          });
+      </script>
   </body>
 </html>
