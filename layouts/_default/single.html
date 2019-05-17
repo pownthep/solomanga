@@ -33,12 +33,11 @@
             color: black;
         }
         img {
-            height: 100%;
-            width: 720px;
+            max-width: 100%;
+            max-height: 100%;
             margin-bottom: 20px;
-            border: 3px solid black;
         }
-        @media only screen and (max-width: 400px) {
+        @media only screen and (max-width: 1024px) {
             img {
                 width: 100vw;
             }
@@ -46,9 +45,8 @@
     </style>
 
     <div id="navbar">
-        <a href="/">Home</a>
-        <a href="../">Chapters</a>
         <a href="{{.Site.BaseURL}}{{.Params.previous}}">Previous</a>
+        <a href="../">Chapters</a>
         <a href="{{.Site.BaseURL}}{{.Params.next}}">Next</a>
     </div>
 
@@ -59,7 +57,7 @@
             <img 
             class="lazy"
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" 
-            data-src="img/{{ $i }}.webp" 
+            data-src="img/{{ $sequence }}.webp" 
             alt="Alternative text to describe image."
             onerror="this.style.display='none'">
         <br>
@@ -83,8 +81,6 @@
                 urls: [
                     "{{.Site.BaseURL}}{{.Params.previous}}",
                     "{{.Site.BaseURL}}{{.Params.next}}",
-                    "{{.Site.BaseURL}}{{.Params.previous}}/img/1.webp",
-                    "{{.Site.BaseURL}}{{.Params.next}}/img/1.webp"
                 ]
             });
         });
