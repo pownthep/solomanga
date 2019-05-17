@@ -57,8 +57,8 @@
     <div id="navbar">
         <a href="/">Home</a>
         <a href="../">Chapters</a>
-        <a href="../{{.Params.previous}}">Previous</a>
-        <a href="../{{.Params.next}}">Next</a>
+        <a href="{{.Site.BaseURL}}{{.Params.previous}}">Previous</a>
+        <a href="{{.Site.BaseURL}}{{.Params.next}}">Next</a>
     </div>
     <div style="text-align: center; margin-top: 70px;">
         <h1>{{ .Title }}</h1>
@@ -86,7 +86,14 @@
             prevScrollpos = currentScrollPos;
         }
         window.addEventListener('load', () =>{
-            quicklink();
+            quicklink({
+                urls: [
+                    "{{.Site.BaseURL}}{{.Params.previous}}",
+                    "{{.Site.BaseURL}}{{.Params.next}}",
+                    "{{.Site.BaseURL}}{{.Params.previous}}/img/1.webp",
+                    "{{.Site.BaseURL}}{{.Params.next}}/img/1.webp"
+                ]
+            });
         });
     </script>
 

@@ -3,6 +3,6 @@ title: "Solo Leveling Chapter 69"
 date: 1/1/1
 range: 78
 description: "Solo Leveling Chapter 69"
-previous: "chapter-68"
-next: "chapter-70"
+previous: "solo-leveling/chapter-68"
+next: "solo-leveling/chapter-70"
 ---
