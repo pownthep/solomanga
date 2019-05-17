@@ -1,1 +1,0 @@
-purgecss --css bootstrap.min.css --content critical.html  --out build/

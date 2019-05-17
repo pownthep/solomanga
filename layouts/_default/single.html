@@ -1,15 +1,14 @@
 {{ define "title" }}
-{{ .Title }} &ndash; {{ .Site.Title }}
+    {{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 
 {{ define "description" }}
-<meta name="Description" content="{{.Params.description}}">
-{{ partial "style.html" . }}
-<link rel="stylesheet" href="{{.Site.BaseURL}}css/build/bootstrap.min.css">
-<script src="{{.Site.BaseURL}}js/yall.js"></script>
+    <meta name="Description" content="{{.Params.description}}">
+    <link rel="stylesheet" href="{{.Site.BaseURL}}css/build/bootstrap.min.css">
+    <script src="{{.Site.BaseURL}}js/yall.js"></script>
 {{ end }}
-{{ define "main" }}
 
+{{ define "main" }}
     <style>
         #navbar {
             background-color: #343a40; /* Black background color */
@@ -33,15 +32,6 @@
             background-color: #ddd;
             color: black;
         }
-        @keyframes fadeIn {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-        }
-            
-        .fadeIn {
-        -webkit-animation-name: fadeIn;
-        animation-name: fadeIn;
-        }
         img {
             height: 100%;
             width: 720px;
@@ -54,18 +44,20 @@
             }
         }
     </style>
+
     <div id="navbar">
         <a href="/">Home</a>
         <a href="../">Chapters</a>
         <a href="{{.Site.BaseURL}}{{.Params.previous}}">Previous</a>
         <a href="{{.Site.BaseURL}}{{.Params.next}}">Next</a>
     </div>
+
     <div style="text-align: center; margin-top: 70px;">
         <h1>{{ .Title }}</h1>
         {{/*  {{ range $i, $sequence :=  (seq .Params.range) }}  */}}
         {{ range $i, $sequence := (seq .Params.range) }}
             <img 
-            class="lazy fadeIn" 
+            class="lazy"
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" 
             data-src="img/{{ $i }}.webp" 
             alt="Alternative text to describe image."
@@ -73,6 +65,7 @@
         <br>
         {{ end }}
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", yall);
         var prevScrollpos = window.pageYOffset;
@@ -96,5 +89,4 @@
             });
         });
     </script>
-
 {{ end }}

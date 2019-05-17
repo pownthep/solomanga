@@ -7,6 +7,9 @@
         Read the latest {{ .Title }} chapters on Solo Manga!
     </title>
     <meta name="Description" content="{{.Params.description}}">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
     <script defer src="{{.Site.BaseURL}}js/ql.js"></script>
     <script defer src="{{.Site.BaseURL}}js/vue.min.js"></script>
     <script defer src="{{.Site.BaseURL}}js/favourite-button.min.js"></script>
@@ -19,14 +22,13 @@
     #column {
       margin-left: 20px; 
       margin-right: 20px; 
-      margin-top: 20px;
       overflow: auto; 
       display: grid; 
       grid-template-columns: auto auto;
       column-gap: 10px;
     }
-    h1 {
-      margin-top: 0;
+    .thumbnail {
+      margin-top: 30px;
     }
     .card {
       margin-bottom: 10px;
@@ -35,6 +37,9 @@
     .chapters {
       height: 300px;
       overflow: auto;
+    }
+    img {
+      height: 745px;
     }
 
     @media only screen and (max-width: 1024px) {
@@ -54,7 +59,9 @@
       #content {
         padding: 20px;
       }
-
+      .thumbnail {
+        margin-top: 0px;
+      }
       .card {
         margin-bottom: 10px;
       }
@@ -62,17 +69,15 @@
   </style>
   <body>
       {{ partial "nav.html" . }}
-      <div id="column">
-        <div style="text-align: center;">
+      <div id="column" class="animated fadeIn">
+        <div class="thumbnail">
           <img src="{{.Site.BaseURL}}img/{{.Params.thumbnail}}" alt=""> <br>
-          
         </div>
         <div id="content">
           {{.Content}}
           <p>
               {{.Params.description}}
           </p>
-          <favourite-button></favourite-button>
           <h2>Chapters</h2>
           <div class="chapters">
             {{ range .Pages.Reverse }}
