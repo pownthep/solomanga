@@ -8,6 +8,9 @@
     </title>
     <meta name="Description" content="10 years ago, after “the Gate” that connected the real world with the monster world opened, some of the ordinary, everyday people received the power to hunt monsters within the Gate. They are known as Hunters. However, not all Hunters are powerful. My name is Sung Jin-Woo, an E-rank Hunter. I&#39;m someone who has to risk his life in the lowliest of dungeons, the World&#39;s Weakest. Having no skills whatsoever to display, I barely earned the required money by fighting in low-leveled dungeons… at least until I found a hidden dungeon with the hardest difficulty within the D-rank dungeons! In the end, as I was accepting death, I suddenly received a strange power, a quest log that only I could see, a secret to leveling up that only I know about! If I trained in accordance with my quests and hunted monsters, my level would rise. Changing from the weakest Hunter to the strongest S-rank Hunter!">
     <script defer src="https://soloman.ga/js/ql.js"></script>
+    <script defer src="https://soloman.ga/js/vue.min.js"></script>
+    <script defer src="https://soloman.ga/js/favourite-button.min.js"></script>
+
     <link rel="stylesheet" href="https://soloman.ga/css/build/bootstrap.min.css">
     <style>
     body {
@@ -19,12 +22,52 @@
 
   </head>
   <style>
-    img {
-      width: 100%;
+    #column {
+      margin-left: 20px; 
+      margin-right: 20px; 
+      margin-top: 20px;
+      overflow: auto; 
+      display: grid; 
+      grid-template-columns: auto auto;
+      column-gap: 10px;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    .card {
+      margin-bottom: 10px;
+    }
+
+    .chapters {
+      height: 300px;
+      overflow: auto;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      #column {
+        display: block;
+        margin-left: 0px; 
+        margin-right: 0px; 
+        margin-top: 0px;
+      }
+      img {
+        width: 100vw;
+      }
+      p {
+        font-size: 12pt;
+      }
+
+      #content {
+        padding: 20px;
+      }
+
+      .card {
+        margin-bottom: 10px;
+      }
     }
   </style>
   <body>
-      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">Solo Manga</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -34,24 +77,43 @@
     </ul>
   </div>
 </nav>
-      <div style="margin-left: 20px; margin-right: 20px; overflow: auto;">
-        
-
-<h3 id="solo-leveling-manwha">Solo Leveling Manwha</h3>
-
-        
-        <div class="card" style="margin-bottom: 10px;">
-            <div class="card-body">
-                <a href="https://soloman.ga/solo-leveling/chapter-70/" aria-label="Solo Leveling Chapter 70">Solo Leveling Chapter 70</a> 
-            </div>
+      <div id="column">
+        <div style="text-align: center;">
+          <img src="https://soloman.ga/img/solo-leveling.webp" alt=""> <br>
+          
         </div>
-        
-        <div class="card" style="margin-bottom: 10px;">
-            <div class="card-body">
-                <a href="https://soloman.ga/solo-leveling/chapter-69/" aria-label="Solo Leveling Chapter 69">Solo Leveling Chapter 69</a> 
+        <div id="content">
+          
+
+<h1 id="solo-leveling">Solo Leveling</h1>
+
+          <p>
+              10 years ago, after “the Gate” that connected the real world with the monster world opened, some of the ordinary, everyday people received the power to hunt monsters within the Gate. They are known as Hunters. However, not all Hunters are powerful. My name is Sung Jin-Woo, an E-rank Hunter. I&#39;m someone who has to risk his life in the lowliest of dungeons, the World&#39;s Weakest. Having no skills whatsoever to display, I barely earned the required money by fighting in low-leveled dungeons… at least until I found a hidden dungeon with the hardest difficulty within the D-rank dungeons! In the end, as I was accepting death, I suddenly received a strange power, a quest log that only I could see, a secret to leveling up that only I know about! If I trained in accordance with my quests and hunted monsters, my level would rise. Changing from the weakest Hunter to the strongest S-rank Hunter!
+          </p>
+          <favourite-button></favourite-button>
+          <h2>Chapters</h2>
+          <div class="chapters">
+            
+            <div class="card">
+                <div class="card-body">
+                    <a href="https://soloman.ga/solo-leveling/chapter-71/" aria-label="Solo Leveling Chapter 71">Solo Leveling Chapter 71</a> 
+                </div>
             </div>
+            
+            <div class="card">
+                <div class="card-body">
+                    <a href="https://soloman.ga/solo-leveling/chapter-70/" aria-label="Solo Leveling Chapter 70">Solo Leveling Chapter 70</a> 
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-body">
+                    <a href="https://soloman.ga/solo-leveling/chapter-69/" aria-label="Solo Leveling Chapter 69">Solo Leveling Chapter 69</a> 
+                </div>
+            </div>
+            
+          </div>
         </div>
-        
       </div>
       <script>
           window.addEventListener('load', () =>{

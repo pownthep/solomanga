@@ -8,26 +8,82 @@
     </title>
     <meta name="Description" content="{{.Params.description}}">
     <script defer src="{{.Site.BaseURL}}js/ql.js"></script>
+    <script defer src="{{.Site.BaseURL}}js/vue.min.js"></script>
+    <script defer src="{{.Site.BaseURL}}js/favourite-button.min.js"></script>
+
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/build/bootstrap.min.css">
     {{ partial "style.html" . }}
 
   </head>
   <style>
-    img {
-      width: 100%;
+    #column {
+      margin-left: 20px; 
+      margin-right: 20px; 
+      margin-top: 20px;
+      overflow: auto; 
+      display: grid; 
+      grid-template-columns: auto auto;
+      column-gap: 10px;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    .card {
+      margin-bottom: 10px;
+    }
+
+    .chapters {
+      height: 300px;
+      overflow: auto;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      #column {
+        display: block;
+        margin-left: 0px; 
+        margin-right: 0px; 
+        margin-top: 0px;
+      }
+      img {
+        width: 100vw;
+      }
+      p {
+        font-size: 12pt;
+      }
+
+      #content {
+        padding: 20px;
+      }
+
+      .card {
+        margin-bottom: 10px;
+      }
     }
   </style>
   <body>
       {{ partial "nav.html" . }}
-      <div style="margin-left: 20px; margin-right: 20px; overflow: auto;">
-        {{ .Content }}
-        {{ range .Pages.Reverse }}
-        <div class="card" style="margin-bottom: 10px;">
-            <div class="card-body">
-                <a href="{{.Permalink}}" aria-label="{{.Title}}">{{.Title}}</a> 
-            </div>
+      <div id="column">
+        <div style="text-align: center;">
+          <img src="{{.Site.BaseURL}}img/{{.Params.thumbnail}}" alt=""> <br>
+          
         </div>
-        {{ end }}
+        <div id="content">
+          {{.Content}}
+          <p>
+              {{.Params.description}}
+          </p>
+          <favourite-button></favourite-button>
+          <h2>Chapters</h2>
+          <div class="chapters">
+            {{ range .Pages.Reverse }}
+            <div class="card">
+                <div class="card-body">
+                    <a href="{{.Permalink}}" aria-label="{{.Title}}">{{.Title}}</a> 
+                </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
       </div>
       <script>
           window.addEventListener('load', () =>{

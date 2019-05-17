@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="{{.Site.BaseURL}}js/ql.js"></script>
-    <link rel="stylesheet" href="{{.Site.BaseURL}}css/build/bootstrap.min.css">
     <script defer src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
     <title>
     {{ block "title" . }}
@@ -14,7 +13,6 @@
 
     {{ block "description" .}}
     {{ end }}
-    {{ partial "style.html" . }}
   </head>
   <body>
     <!-- Code that all your templates share, like a header -->
