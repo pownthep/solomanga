@@ -77,12 +77,7 @@
             prevScrollpos = currentScrollPos;
         }
         window.addEventListener('load', () =>{
-            quicklink({
-                urls: [
-                    "{{.Site.BaseURL}}{{.Params.previous}}",
-                    "{{.Site.BaseURL}}{{.Params.next}}",
-                ]
-            });
+            quicklink();
         });
     </script>
 {{ end }}
