@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vue build --target wc-async ./vue-components/favourite-button.vue",
+    "serve": "vue serve ./vue-components/favourite-button.vue",
+    "test:wc": "http-server dist --gzip "
   },
   "keywords": [],
   "author": "",
