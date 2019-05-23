@@ -13,27 +13,32 @@
   </url>
   
   <url>
-    <loc>https://soloman.ga/one-piece/</loc>
+    <loc>https://soloman.ga/series/one-piece/</loc>
   </url>
   
   <url>
-    <loc>https://soloman.ga/one-piece/chapter-942/</loc>
+    <loc>https://soloman.ga/series/one-piece/chapter-942/</loc>
   </url>
   
   <url>
-    <loc>https://soloman.ga/solo-leveling/</loc>
+    <loc>https://soloman.ga/series/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://soloman.ga/solo-leveling/chapter-69/</loc>
+    <loc>https://soloman.ga/series/solo-leveling/</loc>
   </url>
   
   <url>
-    <loc>https://soloman.ga/solo-leveling/chapter-70/</loc>
+    <loc>https://soloman.ga/series/solo-leveling/chapter-69/</loc>
   </url>
   
   <url>
-    <loc>https://soloman.ga/solo-leveling/chapter-71/</loc>
+    <loc>https://soloman.ga/series/solo-leveling/chapter-70/</loc>
+  </url>
+  
+  <url>
+    <loc>https://soloman.ga/series/solo-leveling/chapter-71/</loc>
   </url>
   
   <url>

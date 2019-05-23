@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script defer src="{{.Site.BaseURL}}js/ql.js"></script>
-    <script defer src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <title>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
     {{ block "title" . }}
     {{ .Site.Title }}
     {{ end }}
-    </title>
+  </title>
 
-    {{ block "description" .}}
-    {{ end }}
-  </head>
-  <body>
-    <!-- Code that all your templates share, like a header -->
-    {{ block "main" . }}
-      <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
-    
-    {{ block "footer" . }}
-    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
-    {{ end }}
-  </body>
+  {{ block "header" .}}
+  {{ end }}
+</head>
+
+<body>
+  <!-- Code that all your templates share, like a header -->
+  {{ block "main" . }}
+  <!-- The part of the page that begins to differ between templates -->
+  {{ end }}
+
+  {{ block "footer" . }}
+  <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+  {{ end }}
+</body>
+
 </html>

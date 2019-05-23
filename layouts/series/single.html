@@ -1,0 +1,73 @@
+{{ define "title" }}
+{{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+
+{{ define "header" }}
+<meta name="Description" content="{{.Params.description}}">
+<link rel="stylesheet" href="{{.Site.BaseURL}}css/build/bootstrap.min.css">
+<script src="{{.Site.BaseURL}}js/yall.js"></script>
+{{ end }}
+
+{{ define "main" }}
+<style>
+    #navbar {
+        position: fixed;
+        top: 0;
+    }
+    img {
+        max-width: 95%;
+    }
+    @media only screen and (max-width: 1024px) {
+        img {
+            width: 100vw;
+        }
+    }
+</style>
+
+<div id="navbar">
+    <a href="{{.Site.BaseURL}}"><b>HOME</b></a>
+    <a href="{{.Site.BaseURL}}{{.Params.previous}}"><b>PREVIOUS</b></a>
+    <a href="../"><b>CHAPTERS</b></a>
+    <a href="{{.Site.BaseURL}}{{.Params.next}}"><b>NEXT</b></a>
+</div>
+
+<div style="text-align: center; margin-top: 70px;" class="animated animatedFadeInUp fadeInUp">
+    <h1>{{ .Title }}</h1>
+    {{/*  {{ range $i, $sequence :=  (seq .Params.range) }} */}}
+        {{ if ne .Params.manga "manga" }}
+            {{ range $i, $sequence := (seq 1 .Params.range) }}
+                <img class="lazy"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    data-src="img/{{ $sequence }}.webp" alt="Alternative text to describe image."
+                    onerror="this.style.display='none'">
+                    <br>
+            {{ end }}
+        {{ end }}
+        {{ if eq .Params.manga "manga" }}
+            {{ range $i, $sequence := (seq 1 .Params.range) }}
+                <img class="lazy"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                data-src="img/{{ $sequence }}.webp" alt="Alternative text to describe image."
+                style="
+                border: 4px solid black;
+                margin-bottom: 20px;"
+                onerror="this.style.display='none'">
+                <br>
+            {{ end }}
+        {{ end }}
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", yall);
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-70px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
+{{ end }}

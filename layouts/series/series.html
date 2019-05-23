@@ -1,0 +1,29 @@
+{{ define "header" }}
+<meta name="Description" content="Read latest mangas and manwha online for free. Fast and no ads.">
+<script src="{{.Site.BaseURL}}js/yall.js"></script>
+<script src="{{.Site.BaseURL}}js/ql.js"></script>
+<link rel="stylesheet" href="{{.Site.BaseURL}}css/build/bootstrap.min.css">
+<style>
+    #series {
+        background-color: rgba(221, 221, 221, 0.575);
+    }
+</style>
+{{ end }}
+
+{{ define "main" }}
+{{ partial "nav.html" . }}
+<main>
+    {{ if eq .Title "Series" }}
+        {{ partial "series.html" . }}
+    {{ end }}
+    {{ if ne .Title "Series" }}
+        {{ partial "chapters.html" . }}
+    {{ end }}
+    <script>
+        document.addEventListener("DOMContentLoaded", yall);
+        window.addEventListener('load', () => {
+            quicklink();
+        });
+    </script>
+</main>
+{{ end }}

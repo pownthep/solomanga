@@ -1,0 +1,20 @@
+<div class="container animated animatedFadeInUp fadeInUp" style="text-align: center;">
+    {{ range .Sections }}
+    <div class="item">
+        <img class="lazy" style="
+                                width: 300px; 
+                                height: 443px; 
+                                border-radius: 5px;
+                                box-shadow: 10px 10px 8px -10px rgba(96, 226, 222, 0.75);
+                                "
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+            data-src="{{.Site.BaseURL}}img/{{.Title}}.webp" alt="Alternative text to describe image.">
+        <br>
+        <a href="{{.Permalink}}">
+            <button class="btn-hover color-1">
+                READ
+            </button>
+        </a>
+    </div>
+    {{ end }}
+</div>

@@ -1,0 +1,117 @@
+<style>
+    #column {
+        margin-left: 20px;
+        margin-right: 20px;
+        overflow: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 10px;
+        width: 60vw;
+    }
+
+    .container-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thumbnail {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    img {
+        width: 300px;
+        height: 443px;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    .chapters {
+        height: 300px;
+        overflow: auto;
+    }
+
+    table {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    tr {
+        height: 50px;
+    }
+
+    td:hover {
+        background-color: #d6d6d6;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #f2f2f2
+    }
+    a:visited {
+        color: rgb(99, 99, 99);
+    }
+
+    @media only screen and (max-width: 1024px) {
+        #column {
+            display: block;
+            width: 100%;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+        }
+
+        img {
+            width: 100vw;
+            height: auto;
+        }
+
+        p {
+            font-size: 12pt;
+        }
+
+        #content {
+            padding: 20px;
+        }
+
+        .thumbnail {
+            margin-top: 0px;
+        }
+
+        .card {
+            margin-bottom: 10px;
+        }
+        
+    }
+</style>
+<div class="container-center animated animatedFadeInUp fadeInUp">
+    <div id="column" class="animated fadeIn">
+        <div class="thumbnail">
+            <img src="{{.Site.BaseURL}}img/{{.Params.thumbnail}}" alt=""> <br>
+            <button class="btn-hover color-1">
+                FOLLOW
+            </button>
+        </div>
+        <div id="content">
+            {{.Content}}
+            <p>
+                {{.Params.description}}
+            </p>
+
+            <h2>Chapters</h2>
+            <div class="chapters">
+                <table>
+                    {{ range .Pages.Reverse }}
+                    <tr>
+                        <td>
+                            <a href="{{.Permalink}}">{{upper .Title}}</a>
+                        </td>
+                    </tr>
+                    {{ end }}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
