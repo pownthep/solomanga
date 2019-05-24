@@ -136,3 +136,18 @@ a {
     animation-name: fadeInUp;
     -webkit-animation-name: fadeInUp;
 }
+::-webkit-scrollbar {
+	background-color: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+	background-image: linear-gradient(to bottom, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}

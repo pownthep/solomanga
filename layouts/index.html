@@ -1,5 +1,10 @@
 {{ define "header" }}
-<meta name="Description" content="Read latest mangas and manwha online for free. Fast and no ads.">
+<meta name="Description" content="Read latest mangas and manwhas online for free. Fast and no ads. High quality manga and manwha
+panels. Read manga and manwha, the way it is meant to be read! 
+">
+{{ range .Pages }}
+<meta name="description" content="{{.Title}}">
+{{ end }}
 <script defer src="{{.Site.BaseURL}}js/ql.js"></script>
 <script defer src="{{.Site.BaseURL}}js/yall.js"></script>
 <script defer src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
