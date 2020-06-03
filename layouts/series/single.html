@@ -39,7 +39,7 @@
             {{ range $i, $sequence := (seq 1 .Params.range) }}
                 <img class="lazy"
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                    data-src="img/1 ({{ $sequence }}).webp" alt="Alternative text to describe image."
+                    data-src="./img/1 ({{ $sequence }}).webp" alt="Alternative text to describe image."
                     onerror="this.style.display='none'">
                     <br>
             {{ end }}
@@ -48,7 +48,7 @@
             {{ range $i, $sequence := (seq 1 .Params.range) }}
                 <img class="lazy"
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-src="img/1 ({{ $sequence }}).webp" alt="Alternative text to describe image."
+                data-src="./img/1 ({{ $sequence }}).webp" alt="Alternative text to describe image."
                 style="
                 border-top: 4px solid black;
                 border-bottom: 4px solid black;
