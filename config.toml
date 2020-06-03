@@ -1,4 +1,4 @@
-baseURL = "https://soloman.ga/"
+baseURL = "./"
 languageCode = "en-us"
 title = "Read the latest manga and manwha at Solo Manga."
 publishDir = "docs"
