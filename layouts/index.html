@@ -28,7 +28,7 @@ panels. Read manga and manwha, the way it is meant to be read!
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                 data-src="img/{{.Params.thumbnail}}" alt="{{.Params.title}}">
             <br>
-            <a href="{{.Permalink}}">
+            <a href="{{.Params.latestURL}}">
                 <button class="btn-hover color-1">
                     {{ upper .Params.latest}}
                 </button>
